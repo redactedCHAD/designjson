@@ -1,0 +1,72 @@
+/* /app/global.css */
+
+/* Import fonts - ensure you have licensed Fraunces, or use variable if available */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* Fraunces is a commercial font; if not available, use 'Playfair Display' or a close serif */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap');
+
+:root{
+  --brand-start: #6C4CF4;
+  --brand-end: #C84FF1;
+  --cta-glow: linear-gradient(90deg,#FF7F50 0%,#FF3CAC 20%,#784BA0 60%,#2B86C5 100%);
+  --cta-shadow: 0 8px 30px rgba(108,76,244,0.18);
+}
+
+/* Display serif for hero titles to mimic screenshots */
+.h-hero {
+  font-family: "Playfair Display", serif; /* swap to Fraunces if available */
+  font-weight: 700;
+  color: #0F1720;
+}
+
+/* CTA pill with animated multicolor glow ring */
+.btn-cta-glow {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-full text-white font-semibold;
+  background-image: var(--cta-glow);
+  background-size: 400% 400%;
+  animation: shift-gradient 4s ease-in-out infinite;
+  box-shadow: 0 6px 28px rgba(120,75,160,0.12);
+  position: relative;
+}
+
+/* Outer subtle luminous ring when focused or hovered */
+.btn-cta-glow::after{
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  filter: blur(14px);
+  opacity: 0.9;
+  background: linear-gradient(90deg,#6C4CF4 0%,#C84FF1 50%,#FF3CAC 100%);
+  z-index: -1;
+}
+
+/* smaller secondary CTA */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-white font-semibold;
+  background-image: linear-gradient(90deg,#6C4CF4,#4D9EFF);
+  box-shadow: 0 6px 20px rgba(108,76,244,0.2);
+}
+
+/* Card with soft border and shadow */
+.card {
+  @apply bg-white rounded-xl border border-[rgba(0,0,0,0.06)] shadow-card-light p-6;
+}
+
+/* badge "Perfect Timing" style */
+.badge-perfect {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm;
+  background: rgba(255,127,80,0.12);
+  color: #FF7F50;
+  border-radius: 999px;
+}
+
+/* subtle nav pill */
+.nav-pill {
+  @apply inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[rgba(0,0,0,0.03)];
+}
+
+/* animated subtle float used for hero icon/preview */
+.float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
