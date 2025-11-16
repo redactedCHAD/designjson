@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "name": "Startup Trend Dashboard UI",
+    "version": "1.0.0",
+    "source": "Inspired by screenshots provided",
+    "description": "A clean, modern, gradient-driven UI system with soft cards, glowing CTAs, and elegant serif headers."
+  },
+
+  "fonts": {
+    "display": {
+      "family": "Fraunces, serif",
+      "weight": "600-900",
+      "sizeScale": {
+        "h1": "42px",
+        "h2": "32px",
+        "h3": "26px"
+      }
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weight": "300-600",
+      "sizeScale": {
+        "lg": "18px",
+        "md": "16px",
+        "sm": "14px",
+        "xs": "12px"
+      }
+    }
+  },
+
+  "colors": {
+    "bg": {
+      "base": "#FFFFFF",
+      "subtle": "#F9FAFB",
+      "card": "#FFFFFF",
+      "input": "#F7F8FA"
+    },
+    "text": {
+      "primary": "#1A1A1A",
+      "secondary": "#4A4A4A",
+      "muted": "#7E7E7E",
+      "white": "#FFFFFF"
+    },
+    "border": {
+      "light": "rgba(0,0,0,0.06)",
+      "medium": "rgba(0,0,0,0.12)"
+    },
+    "brand": {
+      "primaryGradientStart": "#6C4CF4",
+      "primaryGradientEnd": "#C84FF1",
+      "primarySolid": "#6C4CF4",
+      "accent": "#4D9EFF",
+      "success": "#60D46B",
+      "warning": "#FFB14D"
+    },
+    "states": {
+      "hover": "rgba(108, 76, 244, 0.08)",
+      "active": "rgba(108, 76, 244, 0.12)"
+    }
+  },
+
+  "radii": {
+    "sm": "6px",
+    "md": "10px",
+    "lg": "16px",
+    "xl": "24px",
+    "pill": "999px"
+  },
+
+  "shadows": {
+    "cardLight": "0px 1px 3px rgba(0,0,0,0.06), 0px 4px 10px rgba(0,0,0,0.04)",
+    "cardMedium": "0px 4px 12px rgba(0,0,0,0.1)",
+    "hoverLift": "0px 8px 20px rgba(0,0,0,0.15)",
+    "insetFocus": "inset 0 0 0 2px rgba(108,76,244,0.5)"
+  },
+
+  "borders": {
+    "hairline": "1px solid rgba(0,0,0,0.06)",
+    "standard": "1px solid rgba(0,0,0,0.12)",
+    "brandFocus": "2px solid rgba(108,76,244,0.5)"
+  },
+
+  "gradients": {
+    "brandPrimary": "linear-gradient(90deg, #6C4CF4 0%, #C84FF1 100%)",
+    "ctaGlow": "linear-gradient(90deg, #FF7F50, #FF3CAC, #784BA0, #2B86C5)"
+  },
+
+  "motion": {
+    "springSoft": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "duration": {
+      "fast": "120ms",
+      "normal": "250ms",
+      "slow": "400ms"
+    }
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px"
+  },
+
+  "icons": {
+    "style": "duotone, iOS-inspired, thin line stroke",
+    "cornerRadius": "20%",
+    "strokeWidth": 1.75
+  },
+
+  "components": {
+    "card": {
+      "background": "{colors.bg.card}",
+      "padding": "{spacing.lg}",
+      "borderRadius": "{radii.xl}",
+      "border": "{borders.hairline}",
+      "shadow": "{shadows.cardLight}"
+    },
+
+    "ctaButtonPrimary": {
+      "borderRadius": "{radii.pill}",
+      "fontFamily": "{fonts.body.family}",
+      "fontWeight": 600,
+      "padding": "14px 24px",
+      "textColor": "{colors.text.white}",
+      "background": "{gradients.brandPrimary}",
+      "shadow": "0px 0px 12px rgba(108,76,244,0.6)",
+      "hover": {
+        "shadow": "0px 0px 16px rgba(108,76,244,0.9)",
+        "transform": "scale(1.02)"
+      }
+    },
+
+    "ctaButtonGlow": {
+      "borderRadius": "{radii.pill}",
+      "fontFamily": "{fonts.body.family}",
+      "fontWeight": 600,
+      "padding": "14px 24px",
+      "textColor": "{colors.text.white}",
+      "background": "{gradients.ctaGlow}",
+      "backgroundMotion": {
+        "type": "animated-linear",
+        "duration": "4s",
+        "direction": "alternate",
+        "ease": "{motion.springSoft}"
+      },
+      "shadow": "0px 0px 15px rgba(255, 88, 200, 0.75)"
+    },
+
+    "badge": {
+      "perfectTiming": {
+        "bg": "rgba(255,131,79,0.15)",
+        "text": "#FF7F50",
+        "icon": "clock",
+        "radius": "{radii.pill}"
+      }
+    },
+
+    "tag": {
+      "neutral": {
+        "bg": "{colors.bg.subtle}",
+        "text": "{colors.text.secondary}",
+        "radius": "{radii.pill}"
+      }
+    },
+
+    "navPill": {
+      "active": {
+        "bg": "{gradients.brandPrimary}",
+        "text": "{colors.text.white}"
+      },
+      "inactive": {
+        "bg": "{colors.bg.subtle}",
+        "text": "{colors.text.secondary}"
+      }
+    }
+  },
+
+  "states": {
+    "focus": {
+      "outline": "{shadows.insetFocus}"
+    },
+    "pressed": {
+      "transform": "scale(0.96)"
+    }
+  }
+}
